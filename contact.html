@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact us for inquiries, feedback, or bookings at Caffeine Street. We’re here to help!">
     <meta name="keywords" content="coffee shop, contact, inquiries, booking, feedback">
+    <meta name="author" content="Caffeine Street">
+    <meta property="og:title" content="Contact Us - Caffeine Street">
+    <meta property="og:description" content="Get in touch with Caffeine Street for inquiries, feedback, or bookings. Visit us today!">
+    <meta property="og:image" content="https://example.com/caffeine-street-logo.png">
+    <meta property="og:url" content="https://example.com/contact.html">
     <title>Contact Us - Caffeine Street</title>
 
     <!-- SEO Schema Markup for Local Business -->
@@ -16,18 +20,31 @@
             "name": "Caffeine Street",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Ambajogai Road",
+                "streetAddress": "Ambajogai Road, Shivaji Chowk",
                 "addressLocality": "Latur",
                 "addressRegion": "Maharashtra",
                 "postalCode": "413512",
                 "addressCountry": "India"
             },
-            "telephone": "[Phone Number]",
-            "email": "mailto:[Email Address]",
-            "openingHours": "Mo-Su 07:00-18:00",
+            "telephone": "+918090776654",
+            "email": "caffeinestreet@gmail.com",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "07:00",
+                    "closes": "18:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Saturday", "Sunday"],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                }
+            ],
             "sameAs": [
-                "https://www.instagram.com/[Instagram]",
-                "https://www.facebook.com/[Facebook]"
+                "https://www.instagram.com/caffeine_street_official",
+                "https://www.facebook.com/caffeine.street"
             ]
         }
     </script>
@@ -35,13 +52,9 @@
     <!-- External CSS & JS Libraries -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
-
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome Icons for Social Media -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
 
     <!-- Custom Styles -->
     <style>
@@ -50,33 +63,28 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
+            color: #343a40;
         }
-
         /* Sticky Navigation Bar */
-        /*header {
+        nav {
             background-color: #343a40;
-        }*/
-
+        }
         nav .navbar-brand {
-            font-weight: 600;
+            font-weight: 700;
             color: #fff;
         }
-
         nav .navbar-nav .nav-link {
             color: #f8f9fa;
             padding-left: 20px;
             padding-right: 20px;
         }
-
         nav .navbar-nav .nav-link:hover {
             color: #007bff;
         }
-
         /* Contact Page Styles */
         .contact-page {
             padding: 60px 20px;
         }
-
         .contact-container {
             background-color: #fff;
             padding: 40px;
@@ -85,7 +93,6 @@
             max-width: 1200px;
             margin: auto;
         }
-
         .contact-header h1 {
             font-size: 36px;
             font-weight: 700;
@@ -93,27 +100,25 @@
             text-align: center;
             margin-bottom: 30px;
         }
-
         .contact-info, .operating-hours {
             margin-bottom: 30px;
         }
-
         .contact-info h3, .operating-hours h3 {
             font-size: 22px;
             font-weight: 600;
             color: #343a40;
         }
-
         .contact-info p, .operating-hours p {
             font-size: 16px;
             color: #6c757d;
         }
-
         .contact-info p a {
             color: #007bff;
             text-decoration: none;
         }
-
+        .contact-info p a:hover {
+            text-decoration: underline;
+        }
         /* Contact Form Styles */
         .contact-form {
             background-color: #f8f9fa;
@@ -122,14 +127,12 @@
             border: 1px solid #ddd;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
-
         .contact-form h3 {
             font-size: 24px;
             font-weight: 600;
             color: #343a40;
             margin-bottom: 20px;
         }
-
         .contact-form input, .contact-form textarea, .contact-form select, .contact-form button {
             width: 100%;
             padding: 12px;
@@ -137,23 +140,20 @@
             border-radius: 8px;
             border: 1px solid #ddd;
         }
-
         .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
             border-color: #007bff;
             outline: none;
         }
-
         .contact-form button {
             background-color: #007bff;
             color: #fff;
             border: none;
             font-weight: 600;
+            cursor: pointer;
         }
-
         .contact-form button:hover {
             background-color: #0056b3;
         }
-
         /* Call-to-Action Button */
         .cta button {
             background-color: #28a745;
@@ -165,45 +165,44 @@
             width: 100%;
             text-align: center;
             font-size: 18px;
+            cursor: pointer;
         }
-
         .cta button:hover {
             background-color: #218838;
         }
-
         .map {
             margin-top: 40px;
             height: 350px;
             border-radius: 10px;
         }
-
         .social-media a {
             font-size: 18px;
             color: #343a40;
             margin-right: 15px;
+            text-decoration: none;
         }
-
         .social-media a:hover {
             color: #007bff;
         }
     </style>
 </head>
-
 <body>
-
+    <!-- Sticky Navigation Bar -->
     <header>
         <!-- Sticky Navigation Bar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container">
                 <!-- Logo aligned to the left -->
                 <a class="navbar-brand" href="#" style="font-weight: 700; font-size: 2rem;">Caffeine Street</a>
+                
                 <!-- Hamburger Menu for mobile view -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <!-- Navbar links aligned to the right -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -217,41 +216,40 @@
                             <a class="nav-link" href="gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="contact.html">Contact</a>
+                            <a class="nav-link active" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <!-- Contact Page Content -->
     <div class="contact-page">
         <div class="contact-container">
             <div class="contact-header">
                 <h1>Contact Us</h1>
             </div>
-
             <!-- Contact Information -->
-            <div class="contact-info">
-                <h3>Visit Us</h3>
-                <p>Caffeine Street</p>
-                <p>Ambajogai Road, Shivaji Chowk</p>
-                <p>Latur, Maharashtra - 413512</p>
-                <p>Phone: <a href="tel:+[Phone Number]">8090776654</a></p>
-                <p>Email: <a href="mailto:[Email Address]">caffeinestreet@gmail.com</a></p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h3>Visit Us</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Ambajogai Road, Shivaji Chowk, Latur, Maharashtra - 413512</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+918090776654">+91 80907 76654</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:caffeinestreet@gmail.com">caffeinestreet@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="operating-hours">
+                        <h3>Operating Hours</h3>
+                        <p><strong>Mon-Fri:</strong> 7:00 AM - 6:00 PM</p>
+                        <p><strong>Sat-Sun:</strong> 8:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
             </div>
-
-            <!-- Operating Hours -->
-            <div class="operating-hours">
-                <h3>Operating Hours</h3>
-                <p>Mon-Fri: 7:00 AM - 6:00 PM</p>
-                <p>Sat-Sun: 8:00 AM - 6:00 PM</p>
-            </div>
-
             <!-- Google Map Embed -->
             <div class="map" id="googleMap"></div>
-
             <!-- Contact Form -->
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
@@ -267,27 +265,25 @@
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-
             <!-- Social Media Links -->
-            <div class="social-media">
-                <a href="https://www.instagram.com/[Instagram]" target="_blank" class="social-icon">
+            <div class="social-media text-center">
+                <a href="https://www.instagram.com/caffeine_street_official" target="_blank" class="social-icon">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://www.facebook.com/[Facebook]" target="_blank" class="social-icon">
+                <a href="https://www.facebook.com/caffeine.street" target="_blank" class="social-icon">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
             </div>
-
             <!-- Call-to-Action -->
-            <div class="cta">
-                <button onclick="window.location.href='mailto:[Email Address]'">Book Your Table</button>
+            <div class="cta text-center">
+                <button onclick="window.location.href='mailto:caffeinestreet@gmail.com'">Book Your Table</button>
             </div>
         </div>
     </div>
 
     <script>
         function initMap() {
-            const coffeeShopLocation = { lat: 18.3955028, lng: 76.5588501}; // Replace with actual coordinates
+            const coffeeShopLocation = { lat: 18.3955028, lng: 76.5588501 }; // Replace with actual coordinates
             const map = new google.maps.Map(document.getElementById('googleMap'), {
                 zoom: 14,
                 center: coffeeShopLocation,
@@ -306,7 +302,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
