@@ -1,4 +1,5 @@
-The **README.md** file for this GitHub repository, which provides a comprehensive overview of the project, its structure, and how to use it. This file considers all the latest changes, including the implementation of the glass morphism effect.
+Certainly! Below is the updated **README.md** file with the preview link added. I've included a new section called **Live Preview** to make it easy for users to access the deployed application.
+
 
 
 # Caffeine Street Website
@@ -6,22 +7,32 @@ The **README.md** file for this GitHub repository, which provides a comprehensiv
 Welcome to the **Caffeine Street** website repository! This project is a modern, visually appealing coffee shop website designed with a focus on user experience and aesthetics. The website features a **glass morphism effect**, a uniform gradient background, and responsive design to ensure compatibility across devices.
 
 
+
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
-4. [Installation and Setup](#installation-and-setup)
-5. [Folder Structure](#folder-structure)
-6. [Customization](#customization)
-7. [Contributing](#contributing)
-8. [License](#license)
+4. [Live Preview](#live-preview)
+5. [Installation and Setup](#installation-and-setup)
+6. [Folder Structure](#folder-structure)
+7. [Customization](#customization)
+8. [Contributing](#contributing)
+9. [License](#license)
+
 
 
 ## Project Overview
 
 The **Caffeine Street** website is a fully functional coffee shop website that showcases the shop's menu, gallery, and contact information. It includes interactive elements such as animations, hover effects, and a Google Maps integration for location display. The latest updates introduce a **glass morphism effect** using modern CSS techniques like `backdrop-filter` and `opacity`, enhancing the visual appeal without compromising usability.
 
+Key highlights of the project include:
+- A cohesive design language with frosted glass overlays.
+- A responsive layout optimized for all screen sizes.
+- SEO-friendly structure with meta tags and schema markup.
+- Interactive animations and smooth transitions.
+
+---
 
 ## Features
 
@@ -33,6 +44,16 @@ The **Caffeine Street** website is a fully functional coffee shop website that s
 - **Google Maps Integration**: Embedded map for displaying the coffee shop's location.
 - **SEO Optimization**: Meta tags and schema markup for better search engine visibility.
 - **Social Media Links**: Direct links to Instagram and Facebook for customer engagement.
+- **Contact Form**: A functional form for inquiries, feedback, and event bookings.
+
+
+## Live Preview
+
+You can preview the live version of the **Caffeine Street** website by visiting the following link:
+
+[**Live Preview**](https://caffeinestreet.netlify.app/)
+
+This link will take you to the deployed application where you can explore all the features and interact with the website.
 
 
 ## Technologies Used
@@ -73,7 +94,6 @@ The **Caffeine Street** website is a fully functional coffee shop website that s
 4. **Customize Content**:
    - Update the text, images, and links in the respective files to match your coffee shop's details.
 
-
 ## Folder Structure
 
 The project is organized into the following directories:
@@ -95,7 +115,7 @@ caffeine-street/
 └── README.md            # This file.
 ```
 
----
+
 
 ## Customization
 
@@ -111,6 +131,13 @@ To add a new page:
 1. Create a new HTML file (e.g., `team.html`).
 2. Link the new page in the navigation bar (`navbar`) across all HTML files.
 3. Add relevant content and styles.
+
+### Adjusting Glass Morphism Effect
+
+To customize the glass morphism effect:
+- Locate the `.glass-effect` class in the `style.css` file.
+- Adjust properties like `backdrop-filter`, `background-color`, and `border-radius` to suit your design preferences.
+
 
 
 ## Contributing
@@ -149,4 +176,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 Thank you for visiting the **Caffeine Street** repository! If you have any questions or suggestions, feel free to open an issue or contact the maintainers.
 
-Happy coding! ☕
+Happy coding! ☕  
