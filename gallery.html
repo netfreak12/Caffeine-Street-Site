@@ -102,5 +102,33 @@
   <script>
     AOS.init();
   </script>
+  <!-- Custom JavaScript for Filtering -->
+  <script>
+    // Select all filter buttons and gallery items
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Add click event listener to each filter button
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove 'active' class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add 'active' class to the clicked button
+        button.classList.add('active');
+
+        // Get the filter value from the clicked button
+        const filterValue = button.getAttribute('data-filter');
+
+        // Loop through all gallery items and show/hide based on the filter
+        galleryItems.forEach(item => {
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            item.style.display = ''; // Show the item (default inline-block)
+          } else {
+            item.style.display = 'none'; // Hide the item
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
