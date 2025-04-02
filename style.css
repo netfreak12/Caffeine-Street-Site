@@ -9,55 +9,25 @@ body {
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #c95937; /* Dark coffee brown */
+    color: #c95937 !important; /* Dark coffee brown */
 }
 
 /* Glass Morphism Effect */
 .glass-effect {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     backdrop-filter: blur(10px); /* Frosted glass blur effect */
     border-radius: 10px; /* Rounded corners for a polished look */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
     padding: 20px; /* Padding to ensure content doesn't touch edges */
+    transition: transform 0.3s ease-in-out; /* Smooth hover animation */
 }
 
-/*
-.hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.glass-effect:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
 }
 
-.hero .overlay {
-    text-align: center;
-    padding: 20px;
-    color: white;
-}
-.hero h1, .hero p {
-    color: white;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-
-.btn-primary, .btn-secondary {
-    margin: 10px;
-} */
-
-/* Hero Section Adjustment */
+/* Hero Section */
 .hero {
     background-image: url('assets/images/hero-image.jpg');
     background-attachment: fixed;
@@ -69,34 +39,114 @@ h1, h2, h3 {
     align-items: center;
     text-align: center;
     color: white;
-    position: relative; /* Required for overlay */
 }
 
-.hero .overlay {
-    background: rgba(255, 255, 255, 0.2); /* Frosted glass overlay */
-    backdrop-filter: blur(10px);
+.overlay {
+    background: rgba(97, 94, 94, 0.514);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* About Section */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Hero Text */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .hero .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* About Us Section */
 .about {
-    /*background-color: #f7f7f7;*/
-    padding: 60px 0;
+    background-color: #f8f9fa;
+    padding: 40px 20px;
 }
 
-/* Footer Adjustment */
-footer {
-    background: rgba(255, 255, 255, 0.2); /* Frosted glass footer */
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    color: #333; /* Ensure text remains readable */
-    padding: 20px 0;
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-/* Gallery Item Adjustments */
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Responsive About Us Section */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 2rem;
+    }
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+/* Menu Section */
+.menu h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.menu p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.form-select {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Gallery Section */
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -137,7 +187,9 @@ footer {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-}.filter-btn {
+}
+
+.filter-btn {
     margin: 5px;
 }
 
@@ -146,5 +198,286 @@ footer {
     color: white;
 }
 
+/* Contact Page Styles */
+.contact-page {
+    padding: 60px 20px;
+}
 
- 
+.contact-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #c95937;
+    margin-bottom: 30px;
+}
+
+.contact-info,
+.operating-hours {
+    margin-bottom: 30px;
+}
+
+.contact-info h3,
+.operating-hours h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.contact-info p,
+.operating-hours p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.contact-info p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info p a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Map Styles */
+.map {
+    margin-top: 40px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media a {
+    font-size: 18px;
+    color: #343a40;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+/* Call-to-Action Button */
+.cta {
+    margin-top: 30px;
+}
+
+.cta button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cta button:hover {
+    background-color: #218838;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Adjustments for Founder and Co-founder Cards */
+.founder-card,
+.co-founder-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    height: 100%; /* Ensure equal height */
+}
+/* Add horizontal space between cards */
+.founder-card {
+    margin-bottom: 30px; /* Vertical space below each card */
+    margin-right: 20px; /* Horizontal space between cards */
+}
+
+/* Remove margin-right from the last card to avoid unnecessary spacing */
+.founder-card:last-child {
+    margin-right: 0;
+}
+/* Add Space Between Founder and Co-founder Cards */
+.founder-card {
+    margin-bottom: 30px; /* Space below the Founder card */
+}
+
+.founder-card h3,
+.co-founder-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.founder-card p,
+.co-founder-card p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Equalize Visit Us and Operating Hours Cards */
+.visit-us,
+.operating-hours {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    height: 100%; /* Ensure equal height */
+}
+
+/* Adjust Distance Between Map Card and Send Us Message Card */
+.map,
+.contact-form {
+    margin-bottom: 30px; /* Consistent spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .menu h2 {
+        font-size: 2rem;
+    }
+
+    .menu p {
+        font-size: 1rem;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .contact-header h1 {
+        font-size: 28px;
+    }
+
+    .contact-info h3,
+    .operating-hours h3 {
+        font-size: 20px;
+    }
+
+    .contact-form h3 {
+        font-size: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        padding: 10px;
+    }
+
+    .cta button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .menu h2 {
+        font-size: 1.75rem;
+    }
+
+    .menu p {
+        font-size: 0.9rem;
+    }
+
+    .card-img-top {
+        height: 120px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+}

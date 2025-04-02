@@ -1,309 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact us for inquiries, feedback, or bookings at Caffeine Street. We’re here to help!">
-    <meta name="keywords" content="coffee shop, contact, inquiries, booking, feedback">
-    <meta name="author" content="Caffeine Street">
-    <meta property="og:title" content="Contact Us - Caffeine Street">
-    <meta property="og:description" content="Get in touch with Caffeine Street for inquiries, feedback, or bookings. Visit us today!">
-    <meta property="og:image" content="https://example.com/caffeine-street-logo.png">
-    <meta property="og:url" content="https://example.com/contact.html">
-    <title>Contact Us - Caffeine Street</title>
-
-    <!-- SEO Schema Markup for Local Business -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "CoffeeShop",
-            "name": "Caffeine Street",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Ambajogai Road, Shivaji Chowk",
-                "addressLocality": "Latur",
-                "addressRegion": "Maharashtra",
-                "postalCode": "413512",
-                "addressCountry": "India"
-            },
-            "telephone": "+918090776654",
-            "email": "caffeinestreet@gmail.com",
-            "openingHoursSpecification": [
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                    "opens": "07:00",
-                    "closes": "18:00"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": ["Saturday", "Sunday"],
-                    "opens": "08:00",
-                    "closes": "18:00"
-                }
-            ],
-            "sameAs": [
-                "https://www.instagram.com/caffeine_street_official",
-                "https://www.facebook.com/caffeine.street"
-            ]
-        }
-    </script>
-
-    <!-- External CSS & JS Libraries -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
-
-    <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #343a40;
-        }
-        /* Sticky Navigation Bar */
-        nav {
-            background-color: #343a40;
-        }
-        /*nav .navbar-brand {
-            font-weight: 700;
-            color: #fff;
-        }*/
-        nav .navbar-nav .nav-link {
-            color: #f8f9fa;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        nav .navbar-nav .nav-link:hover {
-            color: #007bff;
-        }
-        /* Contact Page Styles */
-        .contact-page {
-            padding: 60px 20px;
-        }
-        .contact-container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 1200px;
-            margin: auto;
-        }
-        .contact-header h1 {
-            font-size: 36px;
-            font-weight: 700;
-            color: #c95937;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .contact-info, .operating-hours {
-            margin-bottom: 30px;
-        }
-        .contact-info h3, .operating-hours h3 {
-            font-size: 22px;
-            font-weight: 600;
-            color: #343a40;
-        }
-        .contact-info p, .operating-hours p {
-            font-size: 16px;
-            color: #6c757d;
-        }
-        .contact-info p a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .contact-info p a:hover {
-            text-decoration: underline;
-        }
-        /* Contact Form Styles */
-        .contact-form {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-        .contact-form h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #343a40;
-            margin-bottom: 20px;
-        }
-        .contact-form input, .contact-form textarea, .contact-form select, .contact-form button {
-            width: 100%;
-            padding: 12px;
-            margin: 12px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-        .contact-form button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-        /* Call-to-Action Button */
-        .cta button {
-            background-color: #28a745;
-            color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            width: 100%;
-            text-align: center;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .cta button:hover {
-            background-color: #218838;
-        }
-        .map {
-            margin-top: 40px;
-            height: 350px;
-            border-radius: 10px;
-        }
-        .social-media a {
-            font-size: 18px;
-            color: #343a40;
-            margin-right: 15px;
-            text-decoration: none;
-        }
-        .social-media a:hover {
-            color: #007bff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact us for inquiries, feedback, or bookings at Caffeine Street. We’re here to help!">
+  <meta name="keywords" content="coffee shop, contact, inquiries, booking, feedback">
+  <title>Contact Us - Caffeine Street</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
     <!-- Sticky Navigation Bar -->
-    <header>
-        <!-- Sticky Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <div class="container">
-                <!-- Logo aligned to the left -->
-                <a class="navbar-brand" href="#" style="font-weight: 700; font-size: 2rem;">Caffeine Street</a>
-                
-                <!-- Hamburger Menu for mobile view -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <!-- Navbar links aligned to the right -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Contact Page Content -->
-    <div class="contact-page">
-        <div class="contact-container">
-            <div class="contact-header">
-                <h1>Contact Us</h1>
-            </div>
-            <!-- Contact Information -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-info ">
-                        <h3>Visit Us</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> Ambajogai Road, Shivaji Chowk, Latur, Maharashtra - 413512</p>
-                        <p><i class="fas fa-phone"></i> <a href="tel:+918090776654">+91 80907 76654</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:caffeinestreet@gmail.com">caffeinestreet@gmail.com</a></p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="operating-hours ">
-                        <h3>Operating Hours</h3>
-                        <p><strong>Mon-Fri:</strong> 7:00 AM - 6:00 PM</p>
-                        <p><strong>Sat-Sun:</strong> 8:00 AM - 6:00 PM</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Google Map Embed -->
-            <div class="map glass-effect" id="googleMap"></div>
-            <!-- Contact Form -->
-            <div class="contact-form glass-effect">
-                <h3>Send Us a Message</h3>
-                <form action="#" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    <select name="inquiry" required>
-                        <option value="event-booking">Event Booking</option>
-                        <option value="menu-questions">Menu Questions</option>
-                        <option value="feedback">Feedback</option>
-                    </select>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-            <!-- Social Media Links -->
-            <div class="social-media text-center glass-effect">
-                <a href="https://www.instagram.com/caffeine_street_official" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="https://www.facebook.com/caffeine.street" target="_blank" class="social-icon">
-                    <i class="fab fa-facebook"></i> Facebook
-                </a>
-            </div>
-            <!-- Call-to-Action -->
-            <div class="cta text-center glass-effect">
-                <button onclick="window.location.href='mailto:caffeinestreet@gmail.com'">Book Your Table</button>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="font-weight: 700; font-size: 2rem;">Caffeine Street</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </nav>
+  </header>
 
-    <script>
-        function initMap() {
-            const coffeeShopLocation = { lat: 18.3955028, lng: 76.5588501 }; // Replace with actual coordinates
-            const map = new google.maps.Map(document.getElementById('googleMap'), {
-                zoom: 14,
-                center: coffeeShopLocation,
-                disableDefaultUI: true,
-                scrollwheel: false
-            });
-            const marker = new google.maps.Marker({
-                position: coffeeShopLocation,
-                map: map,
-                title: 'Caffeine Street'
-            });
-        }
-    </script>
-     <!-- Footer -->
-     <footer class="text-center py-4">
-        <p>&copy; 2025 Caffeine Street. All Rights Reserved.</p>
-    </footer>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Contact Page Content -->
+  <div class="contact-page">
+    <div class="container">
+      <div class="text-center py-4">
+        <h1>Contact Us</h1>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="contact-info glass-effect">
+            <h3>Visit Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ambajogai Road, Shivaji Chowk, Latur, Maharashtra - 413512</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+918090776654">+91 80907 76654</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:caffeinestreet@gmail.com">caffeinestreet@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="operating-hours glass-effect">
+            <h3>Operating Hours</h3>
+            <p><strong>Mon-Fri:</strong> 7:00 AM - 6:00 PM</p>
+            <p><strong>Sat-Sun:</strong> 8:00 AM - 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Map Embed -->
+      <div class="map glass-effect" id="googleMap"></div>
+
+      <!-- Contact Form -->
+      <div class="contact-form glass-effect">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <select name="inquiry" required>
+            <option value="event-booking">Event Booking</option>
+            <option value="menu-questions">Menu Questions</option>
+            <option value="feedback">Feedback</option>
+          </select>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-media text-center glass-effect">
+        <a href="https://www.instagram.com/caffeine_street_official" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/caffeine.street" target="_blank" class="social-icon">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+      </div>
+
+      <!-- Call-to-Action -->
+      <div class="cta text-center glass-effect">
+        <button onclick="window.location.href='mailto:caffeinestreet@gmail.com'">Book Your Table</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>&copy; 2025 Caffeine Street. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Google Maps Script -->
+  <script>
+    function initMap() {
+      const coffeeShopLocation = { lat: 18.3955028, lng: 76.5588501 }; // Replace with actual coordinates
+      const map = new google.maps.Map(document.getElementById('googleMap'), {
+        zoom: 14,
+        center: coffeeShopLocation,
+        disableDefaultUI: true,
+        scrollwheel: false
+      });
+      const marker = new google.maps.Marker({
+        position: coffeeShopLocation,
+        map: map,
+        title: 'Caffeine Street'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

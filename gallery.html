@@ -1,116 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the visual journey of our coffee shop with high-quality images of drinks, pastries, and behind-the-scenes moments.">
-    <meta name="keywords" content="gallery, coffee, pastries, events, baristas, coffee shop">
-    <title>Gallery - Caffeine Street</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Lightbox CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the visual journey of our coffee shop with high-quality images of drinks, pastries, and behind-the-scenes moments.">
+  <meta name="keywords" content="gallery, coffee, pastries, events, baristas, coffee shop">
+  <title>Gallery - Caffeine Street</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <!-- Sticky Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="#" style="font-weight: 700; font-size: 2rem;">Caffeine Street</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Gallery Section -->
-    <section class="gallery py-5" data-aos="fade-up">
-        <div class="container">
-            <h2 class="text-center mb-4">Our Coffee Shop in Pictures</h2>
-            <p class="text-center mb-5">Discover the essence of our shop, from our signature drinks to behind-the-scenes shots.</p>
-
-            <!-- Filter Buttons -->
-            <div class="text-center mb-4">
-                <button class="btn btn-outline-secondary filter-btn active" data-filter="all">All</button>
-                <button class="btn btn-outline-secondary filter-btn" data-filter="coffees">Coffees</button>
-                <button class="btn btn-outline-secondary filter-btn" data-filter="pastries">Pastries</button>
-                <button class="btn btn-outline-secondary filter-btn" data-filter="events">Events</button>
-            </div>
-
-            <!-- Gallery Grid -->
-            <div class="row g-4" id="galleryGrid">
-                <!-- Coffee Item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 gallery-item coffees">
-                    <a href="assets/images/coffee1.jpg" data-lightbox="gallery" data-title="Signature Espresso">
-                        <img src="assets/images/coffee1.jpg" class="img-fluid" alt="Signature Espresso" loading="lazy">
-                        <div class="hover-overlay glass-effect">
-                            <h5 class="text-white">Signature Espresso</h5>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Pastry Item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 gallery-item pastries">
-                    <a href="assets/images/pastry1.jpg" data-lightbox="gallery" data-title="Fresh Croissant">
-                        <img src="assets/images/pastry1.jpg" class="img-fluid" alt="Fresh Croissant" loading="lazy">
-                        <div class="hover-overlay glass-effect">
-                            <h5 class="text-white">Fresh Croissant</h5>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Event Item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 gallery-item events">
-                    <a href="assets/images/event1.jpg" data-lightbox="gallery" data-title="Live Music Night">
-                        <img src="assets/images/event1.jpg" class="img-fluid" alt="Live Music Night" loading="lazy">
-                        <div class="hover-overlay glass-effect">
-                            <h5 class="text-white">Live Music Night</h5>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Add More Images... -->
-                <!-- Ensure you add more gallery items following the same structure above -->
-            </div> <!-- End of Gallery Grid -->
+  <header>
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="font-weight: 700; font-size: 2rem;">Caffeine Street</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <footer>
-        <div class="text-center py-4">
-            <p>&copy; 2025 Caffeine Street. All Rights Reserved.</p>
+  <!-- Gallery Section -->
+  <section class="gallery py-5 text-center" data-aos="fade-up">
+    <div class="container">
+      <h2 class="mb-4">Our Coffee Shop in Pictures</h2>
+      <p class="mb-5">Discover the essence of our shop, from our signature drinks to behind-the-scenes shots.</p>
+
+      <!-- Filter Buttons -->
+      <div class="text-center mb-4">
+        <button class="btn btn-outline-secondary filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-outline-secondary filter-btn" data-filter="coffees">Coffees</button>
+        <button class="btn btn-outline-secondary filter-btn" data-filter="pastries">Pastries</button>
+        <button class="btn btn-outline-secondary filter-btn" data-filter="events">Events</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="row g-4" id="galleryGrid">
+        <!-- Coffee Item -->
+        <div class="col-lg-4 col-md-6 col-sm-12 gallery-item coffees">
+          <a href="assets/images/coffee1.jpg" data-lightbox="gallery" data-title="Signature Espresso">
+            <img src="assets/images/coffee1.jpg" class="img-fluid" alt="Signature Espresso" loading="lazy">
+            <div class="hover-overlay glass-effect">
+              <h5 class="text-white">Signature Espresso</h5>
+            </div>
+          </a>
         </div>
-    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Lightbox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <!-- Custom JS -->
-    <script src="js/gallery.js"></script>
+        <!-- Pastry Item -->
+        <div class="col-lg-4 col-md-6 col-sm-12 gallery-item pastries">
+          <a href="assets/images/pastry1.jpg" data-lightbox="gallery" data-title="Fresh Croissant">
+            <img src="assets/images/pastry1.jpg" class="img-fluid" alt="Fresh Croissant" loading="lazy">
+            <div class="hover-overlay glass-effect">
+              <h5 class="text-white">Fresh Croissant</h5>
+            </div>
+          </a>
+        </div>
 
-    <script>
-        // Initialize AOS animations
-        AOS.init();
-    </script>
+        <!-- Event Item -->
+        <div class="col-lg-4 col-md-6 col-sm-12 gallery-item events">
+          <a href="assets/images/event1.jpg" data-lightbox="gallery" data-title="Live Music Night">
+            <img src="assets/images/event1.jpg" class="img-fluid" alt="Live Music Night" loading="lazy">
+            <div class="hover-overlay glass-effect">
+              <h5 class="text-white">Live Music Night</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Add More Images Here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>&copy; 2025 Caffeine Street. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
-
 </html>
